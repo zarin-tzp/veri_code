@@ -1,0 +1,9 @@
+<h6><i class="fa fa-filter margin-right-5" aria-hidden="true"></i>Filter By Price:</h6>
+<div> 
+    <span *ngIf="(err)" class="text-red">{{err}}</span><br/>
+    <span>Min price:</span>
+        <input type="text" class="form-control" placeholder="Enter minimum price" [(ngModel)]="inputTextMin" (change)="onChange(inputTextMin,inputTextMax)" />
+    <span>Max price:</span>
+        <input type="text" class="form-control" placeholder="Enter maximum price" [(ngModel)]="inputTextMax" (change)="onChange(inputTextMin,inputTextMax)" />
+    <button class="btn btn-primary margin-top-5" (click)="onClick(inputTextMin,inputTextMax)">Filter</button>
+</div>
